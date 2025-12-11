@@ -174,14 +174,16 @@ jobs:
       - name: Autograding Reporter
         uses: classroom-resources/autograding-grading-reporter@v1
         env:
-          TEST-PERSONMODEL_RESULTS: ${{ steps.test-personmodel.outputs.result }}
-          TEST-PERSON-ATTRIBUTES_RESULTS: ${{ steps.test-person-attributes.outputs.result }}
-          TEST-DIR-INHERIT_RESULTS: ${{ steps.test-dir-inherit.outputs.result }}
-          TEST-DIR-PROPS_RESULTS: ${{ steps.test-dir-props.outputs.result }}
-          TEST-ADDDIRECTOR_RESULTS: ${{ steps.test-adddirector.outputs.result }}
-          TEST-GETALL_RESULTS: ${{ steps.test-getall.outputs.result }}
-          TEST-GETBYID_RESULTS: ${{ steps.test-getbyid.outputs.result }}
-          TEST-CONTROLS_RESULTS: ${{ steps.test-controls.outputs.result }}
-          TEST-VALIDATION_RESULTS: ${{ steps.test-validation.outputs.result }}
-          TEST-LOADGRID_RESULTS: ${{ steps.test-loadgrid.outputs.result }}
-          TEST-COMPILATION_RESULTS: ${{ steps.test-compilation.outputs.result }}
+          personmodel-results: ${{ steps.test-personmodel.outputs.result }}
+          person-attributes-results: ${{ steps.test-person-attributes.outputs.result }}
+          dir-inherit-results: ${{ steps.test-dir-inherit.outputs.result }}
+          dir-props-results: ${{ steps.test-dir-props.outputs.result }}
+          adddirector-results: ${{ steps.test-adddirector.outputs.result }}
+          getall-results: ${{ steps.test-getall.outputs.result }}
+          getbyid-results: ${{ steps.test-getbyid.outputs.result }}
+          controls-results: ${{ steps.test-controls.outputs.result }}
+          validation-results: ${{ steps.test-validation.outputs.result }}
+          loadgrid-results: ${{ steps.test-loadgrid.outputs.result }}
+          compilation-results: ${{ steps.test-compilation.outputs.result }}
+       with:
+          runners: test-personmodel,test-person-attributes,test-dir-inherit,test-dir-props,test-adddirector,test-getall,test-getbyid,test-controls,test-validation,test-loadgrid,test-compilation
