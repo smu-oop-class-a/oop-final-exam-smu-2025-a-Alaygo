@@ -12,9 +12,7 @@ namespace OOP.FinalTerm.Exam.Views
         private readonly Color _darkBackground = Color.FromArgb(20, 20, 20);
         private readonly Color _hoverColor = Color.FromArgb(50, 50, 50);
 
-        /// <summary>
-        /// Constructor for adding a new director
-        /// </summary>
+       
         public DirectorForm(IDirectorRepository directorRepository)
         {
             InitializeComponent();
@@ -23,9 +21,7 @@ namespace OOP.FinalTerm.Exam.Views
             _directorRepository = directorRepository;
         }
 
-        /// <summary>
-        /// Constructor for editing an existing director
-        /// </summary>
+        
         public DirectorForm(DirectorModel director)
         {
             InitializeComponent();

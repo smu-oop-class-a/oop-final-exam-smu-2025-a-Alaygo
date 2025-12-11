@@ -19,21 +19,21 @@ namespace OOP.FinalTerm.Exam.Repository
         
         public void AddDirector(DirectorModel director)
         {
-            
+            _dbConnection.Insert(director);
         }
 
        
         public List<DirectorModel> GetAllDirectors()
         {
-          
-            return new List<DirectorModel>(); 
+
+            return _dbConnection.Table<DirectorModel>().ToList();
         }
 
        
         public DirectorModel GetDirectorById(int id)
         {
-           
-            return null; 
+
+            return _dbConnection.Find<DirectorModel>(id);
         }
     }
 }
